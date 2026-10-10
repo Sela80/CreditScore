@@ -198,7 +198,11 @@ CreditScore/
 
 ## 🔗 Démonstration
 
-L'application est déployée sur Render. Ajouter ici l'URL publique exacte du service Render après vérification.
+L'application est déployée sur Render : **[Ouvrir CreditScore CI](https://creditscore-y913.onrender.com)**.
+
+- Application : https://creditscore-y913.onrender.com
+- Vérification de l'API : https://creditscore-y913.onrender.com/api/health
+- Documentation interactive : https://creditscore-y913.onrender.com/docs
 
 ## 👤 Auteur
 
