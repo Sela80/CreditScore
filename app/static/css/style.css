@@ -1,0 +1,113 @@
+:root {
+    --primary: #0a2540;
+    --accent: #00d4ff;
+    --bg: #f4f7f6;
+    --text: #333;
+    --error: #d32f2f;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 { margin: 0; font-size: 2rem; }
+.subtitle { opacity: 0.8; margin-top: 0.5rem; }
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.info-banner {
+    background: #e3f2fd;
+    border-left: 4px solid var(--primary);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: white;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary);
+    padding: 0 0.5rem;
+}
+
+.form-group { margin-bottom: 1rem; }
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover { background: #11365e; }
+
+.hidden { display: none; }
+
+#loader {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin: 2rem 0;
+}
+
+#result-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.result-item { margin-bottom: 1rem; }
+.result-label { font-weight: bold; color: #555; }
+
+.error {
+    background: #ffebee;
+    color: var(--error);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}

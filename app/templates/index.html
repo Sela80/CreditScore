@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditScore CI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CreditScore </h1>
+        <p class="subtitle">Prototype d'évaluation de risque de crédit</p>
+    </header>
+
+    <main>
+        <section class="info-banner">
+            <p><strong>Avertissement :</strong> Ce prototype utilise des données Kaggle (USD) converties en FCFA. Les résultats sont purement statistiques et ne remplacent pas une analyse bancaire humaine.</p>
+        </section>
+
+        <form id="credit-form">
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div class="form-group">
+                    <label for="person_age">Âge du demandeur</label>
+                    <input type="number" id="person_age" name="person_age" min="19" max="99" required>
+                </div>
+                <div class="form-group">
+                    <label for="person_income">Revenu annuel (FCFA)</label>
+                    <input type="number" id="person_income" name="person_income" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="person_home_ownership">Statut du logement</label>
+                    <select id="person_home_ownership" name="person_home_ownership" required>
+                        <option value="RENT">Locataire</option>
+                        <option value="MORTGAGE">Propriétaire (avec prêt)</option>
+                        <option value="OWN">Propriétaire (sans prêt)</option>
+                        <option value="OTHER">Autre</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Situation professionnelle</legend>
+                <div class="form-group">
+                    <label for="person_emp_length">Ancienneté professionnelle (années)</label>
+                    <input type="number" id="person_emp_length" name="person_emp_length" min="0" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations sur le crédit</legend>
+                <div class="form-group">
+                    <label for="loan_intent">Objet du crédit</label>
+                    <select id="loan_intent" name="loan_intent" required>
+                        <option value="EDUCATION">Éducation</option>
+                        <option value="MEDICAL">Médical</option>
+                        <option value="VENTURE">Création d'entreprise</option>
+                        <option value="PERSONAL">Personnel</option>
+                        <option value="DEBTCONSOLIDATION">Rachat de crédit</option>
+                        <option value="HOMEIMPROVEMENT">Travaux immobiliers</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="loan_amnt">Montant du crédit demandé (FCFA)</label>
+                    <input type="number" id="loan_amnt" name="loan_amnt" min="1" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Historique de crédit</legend>
+                <div class="form-group">
+                    <label for="cb_person_default_on_file">Antécédent de défaut</label>
+                    <select id="cb_person_default_on_file" name="cb_person_default_on_file" required>
+                        <option value="N">Non</option>
+                        <option value="Y">Oui</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cb_person_cred_hist_length">Ancienneté de l'historique de crédit (années)</label>
+                    <input type="number" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length" min="0" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submit-btn">Évaluer le risque</button>
+        </form>
+
+        <div id="loader" class="hidden">Analyse en cours...</div>
+        <div id="result-container" class="hidden"></div>
+        <div id="error-container" class="hidden error"></div>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
