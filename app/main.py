@@ -25,7 +25,8 @@ except Exception as e:
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    # CORRECTION 1 : 'request' doit être le premier argument
+    return templates.TemplateResponse(request, "index.html")
 
 @app.get("/api/health")
 async def health_check():
@@ -39,7 +40,8 @@ async def predict_credit_risk(payload: CreditRequest):
         raise HTTPException(status_code=503, detail="Service de prédiction indisponible")
     
     try:
-        result = model_service.predict(payload.dict())
+        # CORRECTION 2 : .model_dump() remplace .dict() pour la compatibilité Pydantic V2
+        result = model_service.predict(payload.model_dump())
         return result
     except Exception as e:
         logger.error(f"Erreur de prédiction : {e}")
