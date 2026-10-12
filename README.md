@@ -1,4 +1,4 @@
-# CreditScore CI — Évaluation du risque de crédit
+# CreditScore  — Évaluation du risque de crédit
 
 > Prototype de Machine Learning qui estime la probabilité statistique de défaut d'un demandeur de crédit à partir de son profil et des caractéristiques du crédit demandé.
 
@@ -6,7 +6,7 @@
 
 Le projet explore comment la Data Science peut aider une équipe crédit à analyser le risque de défaut et à structurer une première estimation du risque à partir des informations disponibles au moment de la demande.
 
-**CreditScore CI est un prototype pédagogique.** Il ne remplace ni l'analyse d'un analyste crédit ni les règles de décision d'un établissement financier.
+**CreditScore  est un prototype pédagogique.** Il ne remplace ni l'analyse d'un analyste crédit ni les règles de décision d'un établissement financier.
 
 ## 🧩 Problématique métier
 
@@ -54,7 +54,6 @@ person_home_ownership
 person_emp_length
 loan_intent
 loan_amnt
-loan_percent_income
 cb_person_default_on_file
 cb_person_cred_hist_length
 ```
@@ -198,12 +197,10 @@ L'application est déployée sur Render : **[Ouvrir CreditScore CI](https://cred
 
 **Kouakou Gédéon Sela**
 
-Data Science | Python · SQL · Machine Learning · Power BI  
-Intérêt : Data Science appliquée à la banque et à la finance.
+Aspiring Data Scientist | Python · SQL · Machine Learning · Power BI | Data Science appliquée à la Banque & Finance |
 
 - GitHub : https://github.com/Sela80
 - Projet : https://github.com/Sela80/CreditScore
-- Projet de référence de présentation : https://github.com/Sela80/TeleCLV
 
 ---
 
