@@ -154,16 +154,6 @@ Puis :
 pip install -r requirements.txt
 ```
 
-### 3. Lancer l'application
-
-Depuis la racine du dépôt :
-
-```bash
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-Ouvrir ensuite http://127.0.0.1:8000 . La documentation de l'API est accessible à http://127.0.0.1:8000/docs .
-
 ## 📁 Structure du dépôt
 
 ```text
